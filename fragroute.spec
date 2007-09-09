@@ -1,17 +1,13 @@
-%define name	fragroute
-%define version 1.2
-%define release %mkrel 8
-
 Summary:	Fragroute - intercept, modify, and rewrite egress traffic
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		fragroute
+Version:	1.2
+Release:	%mkrel 8
 License:	BSD
 # not sure about this one
 Group:		System/Servers
 URL:		http://monkey.org/~dugsong/fragroute/
 Source0:	%{name}-%{version}.tar.bz2
-BuildRequires:	libdnet-devel
+BuildRequires:	dnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libevent-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
