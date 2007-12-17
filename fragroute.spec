@@ -10,7 +10,6 @@ Source0:	%{name}-%{version}.tar.bz2
 BuildRequires:	dnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libevent-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 fragroute intercepts, modifies, and rewrites egress traffic,
