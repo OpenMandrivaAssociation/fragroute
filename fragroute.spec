@@ -1,7 +1,7 @@
 Summary:	Fragroute - intercept, modify, and rewrite egress traffic
 Name:		fragroute
 Version:	1.2
-Release:	%mkrel 9
+Release:	%mkrel 10
 License:	BSD
 # not sure about this one
 Group:		System/Servers
@@ -10,7 +10,7 @@ Source0:	%{name}-%{version}.tar.bz2
 BuildRequires:	dnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libevent-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 fragroute intercepts, modifies, and rewrites egress traffic,
@@ -43,12 +43,12 @@ export CFLAGS="%{optflags} -fPIC"
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %makeinstall
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
