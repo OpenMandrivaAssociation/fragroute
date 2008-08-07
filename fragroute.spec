@@ -1,7 +1,7 @@
 Summary:	Fragroute - intercept, modify, and rewrite egress traffic
 Name:		fragroute
 Version:	1.2
-Release:	%mkrel 10
+Release:	%mkrel 11
 License:	BSD
 # not sure about this one
 Group:		System/Servers
