@@ -7,6 +7,7 @@ License:	BSD
 Group:		System/Servers
 URL:		http://monkey.org/~dugsong/fragroute/
 Source0:	%{name}-%{version}.tar.bz2
+Patch0:		1.2-libevent.patch
 BuildRequires:	dnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libevent-devel
@@ -27,6 +28,7 @@ systems, firewalls, and basic TCP/IP stack behaviour.
 %prep
 
 %setup -q
+%patch0 -p1
 
 # lib64 fix
 perl -pi -e "s|/lib\ |/%{_lib}\ |g" configure*
@@ -39,13 +41,13 @@ touch * scripts/* win32/*
 #libtoolize --copy --force; aclocal-1.4; automake-1.4; autoconf-2.13
 %serverbuild
 export CFLAGS="%{optflags} -fPIC"
-%configure 
+%configure2_5x
 %make
 
 %install
 rm -rf %{buildroot}
 
-%makeinstall
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
