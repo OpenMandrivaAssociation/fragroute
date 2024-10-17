@@ -5,7 +5,7 @@ Release:	%mkrel 15
 License:	BSD
 # not sure about this one
 Group:		System/Servers
-URL:		http://monkey.org/~dugsong/fragroute/
+URL:		https://monkey.org/~dugsong/fragroute/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		1.2-libevent.patch
 BuildRequires:	dnet-devel
