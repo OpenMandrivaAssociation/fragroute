@@ -8,6 +8,11 @@ Group:		System/Servers
 URL:		https://monkey.org/~dugsong/fragroute/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		1.2-libevent.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	dnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	libevent-devel
